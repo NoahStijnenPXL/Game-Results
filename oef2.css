@@ -1,1 +1,71 @@
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
+
+/* tabel eigenschappen */
+table {
+    width: 700px;
+    height: 300px;
+    border-collapse: separate;
+    border-spacing: 4px;
+    margin: 20px auto;
+    font-size: 16px;
+    font-family: serif;
+    text-align: center;
+
+    td {
+        border: 3px rgb(0, 0, 0) solid;
+    }
+
+    th {
+        border: 3px rgb(0, 0, 0) solid;
+    }
+}
+
+/* head tabel eigenschappen */
+thead {
+    /* In de thead 1ste tr eigenschappen */
+    tr:first-child {
+        color: rgb(255, 255, 255);
+        background-color: rgb(100, 100, 100);
+
+        th:first-child > span {
+            font-size: 60px;
+            display: inline-block;
+            animation: spin 20s infinite linear;
+        }
+    }
+
+
+    /* In de thead 2de tr eigenschappen */
+    tr:nth-child(2) {
+        background-color: rgb(200,200,200);
+    }
+}
+
+/* body tabel eigenschappen */
+tbody {
+    th {
+        background: rgb(200,200,200);
+    }
+
+    td {
+        font-family: monospace;
+    }
+/* in de eerste tr de eerste th eigenschappen */
+    tr:first-child th:first-child {
+        background: rgb(100,100,100);
+        color: rgb(255,255,255);
+    }
+
+    tr:first-child td:nth-child(3),
+    tr:first-child td:nth-child(2),
+    tr:nth-child(2) td:nth-child(3),
+    tr:nth-child(3) td:nth-child(4),
+    tr:nth-child(4) td:nth-child(5),
+    tr:nth-child(5) td:nth-child(6) {
+        background-color: rgb(200,200,200);
+    }
+}
